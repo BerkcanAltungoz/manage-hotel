@@ -1,0 +1,122 @@
+body  {
+    background-repeat: no-repeat;
+    background-size: 100% 900px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.menu-area li a {
+    text-decoration: none;
+}
+
+.menu-area li {
+    list-style-type: none;
+}
+
+.custom-padding{
+    padding-top: 25px;
+}
+
+nav {
+    position: relative;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 10px 0;
+    background: dodgerblue;
+    z-index: 1;
+    text-align: right;
+    padding-right: 2%;
+}
+
+
+.header4 {
+    width: 30%;
+    float: left;
+    text-align: left;
+    padding-left: 5%;
+    color: white;
+}
+
+.menu-area li {
+    display: inline-block;
+}
+
+.menu-area a {
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 25px;
+    font-size: 14px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+}
+.menu-area a:hover{
+    background: grey;
+    color: #fff;
+}
+
+.menu-area a:hover:after {
+    transform: translateY(-50%) rotate(-35deg);
+}
+
+nav:before {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #333;
+    border-right: 10px solid #333;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    left: 0;
+}
+
+nav:after {
+    position: absolute;
+    content: '';
+    border-top: 10px solid #333;
+    border-left: 10px solid #333;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 100%;
+    right: 0;
+}
+li:hover,
+li:focus-within {
+    background: royalblue;
+    cursor: pointer;
+}
+li:focus-within a {
+    outline: none;
+}
+ul li ul {
+    background: royalblue;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+
+    display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus  {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+}
